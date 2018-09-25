@@ -22,9 +22,7 @@ if( isset($_POST['host1']) && isset($_POST['port1']) && isset($_POST['user1']) &
     }
 
     if( isset($db1) && isset($db2) ){
-
-        $table1 = $table2 = [];
-
+        
         if( $q1 = $db1->query('SHOW TABLES') ){
             //$rs1 = $q1->fetchAll(PDO::FETCH_BOTH);
             $rs1 = $q1->fetchAll(PDO::FETCH_COLUMN);
