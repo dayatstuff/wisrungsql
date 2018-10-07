@@ -176,7 +176,9 @@ app.post('/main' , (req, res) => {
 */
     
     
-        
+        const tableDiff  = async () => {
+
+        }
         var promisePertama = new Promise( (resolve, reject) => {
             let mysql = require('mysql')
         
@@ -238,8 +240,6 @@ app.post('/main' , (req, res) => {
     
         Promise.all([ promisePertama, promiseKedua ]).then((values) => {
             
-            
-            
             try {
                 
                 let daftar = []
@@ -254,18 +254,7 @@ app.post('/main' , (req, res) => {
             } catch (error) {
                 throw err
             }
-            
-            
-            
-            
-
-
-
-
-
-
-    
-            
+                
         })
 
     
